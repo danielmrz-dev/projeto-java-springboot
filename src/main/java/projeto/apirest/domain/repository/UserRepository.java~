@@ -1,0 +1,4 @@
+package projeto.apirest.domain.repository;
+
+public interface UserRepository {
+}

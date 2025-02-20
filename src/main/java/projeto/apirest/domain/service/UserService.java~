@@ -1,0 +1,4 @@
+package projeto.apirest.domain.service;
+
+public interface UserService {
+}

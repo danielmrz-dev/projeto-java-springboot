@@ -1,0 +1,4 @@
+package projeto.apirest.domain.model;
+
+public class BaseItem {
+}
