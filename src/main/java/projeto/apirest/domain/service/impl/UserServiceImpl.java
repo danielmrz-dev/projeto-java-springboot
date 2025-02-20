@@ -5,6 +5,7 @@ import projeto.apirest.domain.model.User;
 import projeto.apirest.domain.repository.UserRepository;
 import projeto.apirest.domain.service.UserService;
 
+import java.util.List;
 import java.util.NoSuchElementException;
 
 @Service
@@ -28,4 +29,16 @@ public class UserServiceImpl implements UserService {
         }
         return userRepository.save(userToCreate);
     }
+
+    @Override
+    public List<User> findAll() {
+        return userRepository.findAll();
+    }
+
+    @Override
+    public void deleteById(Long id) {
+        userRepository.deleteById(id);
+    }
+
+
 }
