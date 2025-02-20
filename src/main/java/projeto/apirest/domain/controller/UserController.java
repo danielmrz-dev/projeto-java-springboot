@@ -7,6 +7,7 @@ import projeto.apirest.domain.model.User;
 import projeto.apirest.domain.service.UserService;
 
 import java.net.URI;
+import java.util.List;
 
 @RestController
 @RequestMapping("/users")
