@@ -1,9 +1,9 @@
 spring:
   datasource:
-    url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}
+    url: jdbc:${DATABASE_PUBLIC_URL}?useSSL=false&allowPublicKeyRetrieval=true
     username: ${PGUSER}
     password: ${PGPASSWORD}
-    driverClassName: org.postgresql.Driver
+#    driverClassName: org.postgresql.Driver
     platform: postgres
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
@@ -11,3 +11,4 @@ spring:
     generate-ddl: true
     hibernate:
       ddl-auto: create
+
