@@ -8,4 +8,5 @@ import projeto.apirest.domain.model.User;
 public interface UserRepository extends JpaRepository<User, Long> {
 
     boolean existsByAccountNumber(String accountNumber);
+
 }

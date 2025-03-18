@@ -40,5 +40,25 @@ public class UserServiceImpl implements UserService {
         userRepository.deleteById(id);
     }
 
+    @Override
+    public void updateUser(User user, User userUpdated) {
+        if (userUpdated.getName() != null) {
+            user.setName(userUpdated.getName());
+        }
+        if (userUpdated.getAccount() != null) {
+            user.setAccount(userUpdated.getAccount());
+        }
+        if (userUpdated.getFeatures() != null) {
+            user.setFeatures(userUpdated.getFeatures());
+        }
+        if (userUpdated.getNews() != null) {
+            user.setNews(userUpdated.getNews());
+        }
+        if (userUpdated.getCard() != null) {
+            user.setCard(userUpdated.getCard());
+        }
+        userRepository.save(user);
+    }
+
 
 }
