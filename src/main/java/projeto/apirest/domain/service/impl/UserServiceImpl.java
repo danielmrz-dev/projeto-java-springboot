@@ -45,20 +45,47 @@ public class UserServiceImpl implements UserService {
         if (userUpdated.getName() != null) {
             user.setName(userUpdated.getName());
         }
+
         if (userUpdated.getAccount() != null) {
-            user.setAccount(userUpdated.getAccount());
+            if (user.getAccount() == null) {
+                user.setAccount(userUpdated.getAccount());
+            } else {
+                if (userUpdated.getAccount().getNumber() != null) {
+                    user.getAccount().setNumber(userUpdated.getAccount().getNumber());
+                }
+                if (userUpdated.getAccount().getAgency() != null) {
+                    user.getAccount().setAgency(userUpdated.getAccount().getAgency());
+                }
+                if (userUpdated.getAccount().getBalance() != null) {
+                    user.getAccount().setBalance(userUpdated.getAccount().getBalance());
+                }
+                if (userUpdated.getAccount().getLimit() != null) {
+                    user.getAccount().setLimit(userUpdated.getAccount().getLimit());
+                }
+            }
         }
+
+        if (userUpdated.getCard() != null) {
+            if (user.getCard() == null) {
+                user.setCard(userUpdated.getCard());
+            } else {
+                if (userUpdated.getCard().getNumber() != null) {
+                    user.getCard().setNumber(userUpdated.getCard().getNumber());
+                }
+                if (userUpdated.getCard().getLimit() != null) {
+                    user.getCard().setLimit(userUpdated.getCard().getLimit());
+                }
+            }
+        }
+
         if (userUpdated.getFeatures() != null) {
             user.setFeatures(userUpdated.getFeatures());
         }
+
         if (userUpdated.getNews() != null) {
             user.setNews(userUpdated.getNews());
         }
-        if (userUpdated.getCard() != null) {
-            user.setCard(userUpdated.getCard());
-        }
+
         userRepository.save(user);
     }
-
-
 }
