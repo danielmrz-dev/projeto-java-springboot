@@ -68,6 +68,8 @@ classDiagram
 
 ### Tech Stack
 
+- Spring Initializr
+- Mermaid
 - Java 17
 - Spring Boot 3
 - Banco de Dados Postgres
