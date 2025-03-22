@@ -62,7 +62,7 @@ classDiagram
 ### Links
 
 - Repositório do front-end: [Link](https://github.com/danielmrz-dev/projeto-java-spring-boot-front)
-- Link do deploy da aplicação: [Link](https://github.com/danielmrz-dev/projeto-java-springboot)
+- Link do deploy da aplicação: [Link](https://projeto-java-spring-boot-front.vercel.app)
 
 ## Processo
 
